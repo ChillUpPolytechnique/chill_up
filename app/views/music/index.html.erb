@@ -15,10 +15,10 @@
   <tbody>
     <% @musics.each do |music| %>
       <tr>
-        <td><%= link_to music.id, music_path(music) %></td>
-        <td><%= music.name %></td>
-        <td><%= music.file %></td>
-        <td><%=l music.created_at %></td>
+        <td><%= link_to music.id, music_path(music) %> </td>
+        <td><%= music.name %> </td>
+        <td><%= music.file %> </td>
+        <td><%=l music.created_at %> </td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_music_path(music), :class => 'btn btn-default btn-xs' %>
