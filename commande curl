@@ -1,0 +1,4 @@
+curl "http://localhost:3000/musics/1/wake" -H "Content-Type: application/json" -d "{\"wake\": {\"waker_name\": \"Jean Pierre le Spectateur\", \"wakee_name\": \"Jean Pierre la spectratrice\" } }"
+
+
+curl "http://localhost:3000/shows/1/book" -H "Content-Type: application/json" -d "{\"booking\": {\"user_name\": \"Jean Pierre le Spectateur\", \"seats\": 3 } }"

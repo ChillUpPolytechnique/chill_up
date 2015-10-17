@@ -2,8 +2,8 @@ class MusicsController < ApplicationController
   before_action :set_music, only: [:show, :edit, :update, :destroy, :wake]
 
 
-  # On saute une etape de securite si on appel BOOK en JSON
-  skip_before_action :verify_authenticity_token, only: [:book]
+  # On saute une etape de securite si on appel WAKE en JSON
+  skip_before_action :verify_authenticity_token, only: [:wake]
 
   # GET /musics
   # GET /musics.json
