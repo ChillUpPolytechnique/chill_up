@@ -8,7 +8,7 @@ default: &default
   adapter: sqlite3
   pool: 5
   timeout: 5000
-  
+
 development:
   adapter: sqlite3
   database: db/shows_tonight_development.sqlite3

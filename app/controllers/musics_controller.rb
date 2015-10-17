@@ -1,5 +1,9 @@
 class MusicsController < ApplicationController
-  before_action :set_music, only: [:show, :edit, :update, :destroy]
+  before_action :set_music, only: [:show, :edit, :update, :destroy, :wake]
+
+
+  # On saute une etape de securite si on appel BOOK en JSON
+  skip_before_action :verify_authenticity_token, only: [:book]
 
   # GET /musics
   # GET /musics.json
@@ -61,6 +65,22 @@ class MusicsController < ApplicationController
     end
   end
 
+  # POST /musics/1/wake.json
+  def wake
+    # On crée un nouvel objet booking à partir des paramètres reçus
+    @wake = Wake.new(wake_params)
+    # On précise que cet object Wake dépend du show concerné
+    @wake.music = @music
+
+    respond_to do |format|
+      if @wake.save
+        format.json
+      else
+        format.json { render json: @wake.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_music
@@ -71,4 +91,10 @@ class MusicsController < ApplicationController
     def music_params
       params.require(:music).permit(:name, :file)
     end
+
+    # On ajoute les paramètres qu'on va envoyer avec le wake
+    def wake_params
+      params.require(:wake).permit(:waker_name, :wakee_name)
+    end
+
 end

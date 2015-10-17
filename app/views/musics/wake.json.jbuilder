@@ -1,0 +1,1 @@
+json.extract! @wake, :id, :waker_name, :wakee_name
