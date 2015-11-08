@@ -20,36 +20,13 @@ angular.module('starter', ['ionic'])
 
 })
 
-.controller('HomeCtrl', function($scope, $ionicLoading, $state){
- 
-  $scope.search=function(city){
-     $state.go('weather',{city: city})
-  }
-    
-})
-
-.controller('WeatherCtrl', function($scope, $ionicLoading, $stateParams, $http){
-
-  $scope.city=stateParams.city
-  url='http://openweathermap.org/find?q=montpellier'
-  $ionicLoading.show({
-    template:'Chargement...'
-  });
-  $http.get(url).succes(function(response){
-  $ionicLoading.hide();
-  $scope.weather=response;
-
-  })
-
-})
-
 
 .config(function($stateProvider, $urlRouterProvider) {
 
 $stateProvider.state('home',{
   url:'/home',
   templateUrl: 'templates/home.html',
-  controller:'HomeCtrl'
+  //controller:'HomeCtrl'
 })
 
 $stateProvider.state('logout',{
