@@ -35,13 +35,31 @@ $stateProvider.state('logout',{
   //controller:'AboutCrl'
 })
 
-$stateProvider.state('new-wake',{
-  url:'/new-wake',
-  templateUrl:'templates/new-wake.html',
-  //controller:'New-wakeCtrl'
+$stateProvider.state('wakes-given',{
+  url:'/wakes-given',
+  templateUrl:'templates/wakes-given.html',
+  //controller:'Wakes-givenCtrl'
+
+}) 
+$stateProvider.state('wakes-received',{
+  url:'/wakes-received',
+  templateUrl:'templates/wakes-received.html',
+  //controller:'Wakes-receivedCtrl'
 
 })  
 
+$stateProvider.state('ranking',{
+  url:'/ranking',
+  templateUrl:'templates/ranking.html',
+  //controller:'RankingCtrl'
+
+}) 
+
+$stateProvider.state('music',{
+  url:'/new-wake/music',
+  templateUrl:'templates/music.html',
+  controller:'MusicCtrl'
+})
 
 $stateProvider.state('preferences',{
   url:'/preferences',
@@ -53,6 +71,12 @@ $stateProvider.state('login',{
   url:'/login',
   templateUrl:'templates/login.html',
   //controller:'LoginCtrl'
+})
+
+$stateProvider.state('new-wake',{
+  url:'/new-wake',
+  templateUrl:'templates/new-wake.html',
+  //controller:'New-wakeCtrl'
 })
 
 $urlRouterProvider.otherwise('/home')
