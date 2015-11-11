@@ -49,6 +49,12 @@ $stateProvider.state('preferences',{
   //controller:'New-wakeCtrl'
 })
 
+$stateProvider.state('login',{
+  url:'/login',
+  templateUrl:'templates/login.html',
+  //controller:'LoginCtrl'
+})
+
 $urlRouterProvider.otherwise('/home')
 });
 
