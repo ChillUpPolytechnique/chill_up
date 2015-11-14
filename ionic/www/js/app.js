@@ -29,6 +29,12 @@ $stateProvider.state('home',{
   //controller:'HomeCtrl'
 })
 
+$stateProvider.state('page2',{
+  url:'/page2',
+  templateUrl: 'templates/page2.html',
+  //controller:'Page2Ctrl'
+})
+
 $stateProvider.state('logout',{
   url: '/logout',
   templateUrl:'templates/logout.html',
