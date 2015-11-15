@@ -4,6 +4,18 @@ Rails.application.routes.draw do
   get 'home/index'
   root 'home#index'
   post 'musics/:id/wake' => 'musics#wake'
+
+  #https://gist.github.com/dhoelzgen/cd7126b8652229d32eb4
+  namespace :api, :defaults => {:format => :json} do
+    namespace :v1 do
+
+      controller :whatever, path: '/whatever' do
+        match 'post_action', via: [ :post, :options]
+      end
+      
+    end
+  end
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
