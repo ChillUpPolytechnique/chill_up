@@ -1,4 +1,4 @@
-class MusicsController < ApplicationController
+class MusicsController < BaseController
   before_action :set_music, only: [:show, :edit, :update, :destroy, :wake]
 
 

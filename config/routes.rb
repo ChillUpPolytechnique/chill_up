@@ -1,9 +1,20 @@
 Rails.application.routes.draw do
-  resources :users
-  resources :musics
+  resources :users do
+  collection do
+      match 'post_action', via: [ :post, :options]
+    end
+  end
+  resources :musics do
+  collection do
+      match 'post_action', via: [ :post, :options]
+    end
+  end
   get 'home/index'
   root 'home#index'
   post 'musics/:id/wake' => 'musics#wake'
+
+
+  
 
   #https://gist.github.com/dhoelzgen/cd7126b8652229d32eb4
   
