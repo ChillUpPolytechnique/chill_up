@@ -8,12 +8,16 @@
 
 Music.create(
     name: "Musique",
-    file: "d"
+    file: "d",
+    author: "d",
+    image: "d"
   )
 
 Music.create(
     name: "la music",
-    file: "ddfdf"
+    file: "ddfdf",
+    author: "e",
+    image: "ded"
   )
 
 User.create(

@@ -11,13 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151017120438) do
+ActiveRecord::Schema.define(version: 20151120161428) do
 
   create_table "musics", force: :cascade do |t|
     t.string   "name"
     t.string   "file"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "author"
+    t.string   "image"
   end
 
   create_table "users", force: :cascade do |t|
@@ -26,6 +28,8 @@ ActiveRecord::Schema.define(version: 20151017120438) do
     t.string   "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "alarm_hour"
+    t.integer  "alarm_min"
   end
 
   create_table "wakes", force: :cascade do |t|

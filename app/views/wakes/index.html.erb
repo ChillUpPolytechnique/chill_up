@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Wakes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width:100px">Waker</th>
+      <th style="width:100px">Wakee</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wakes.each do |wake| %>
+      <tr>
+        <td><%= wake.waker_name %></td>
+        <td><%= wake.wakee_name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+

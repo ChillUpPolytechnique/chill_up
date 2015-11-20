@@ -89,7 +89,7 @@ class MusicsController < BaseController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def music_params
-      params.require(:music).permit(:name, :file)
+      params.require(:music).permit(:name, :file, :author, :image)
     end
 
     # On ajoute les paramètres qu'on va envoyer avec le wake

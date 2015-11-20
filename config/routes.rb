@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     end
   end
   get 'home/index'
+  get '/wake' => 'wakes#index'
   root 'home#index'
   post 'musics/:id/wake' => 'musics#wake'
 
